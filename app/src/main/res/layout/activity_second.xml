@@ -1,0 +1,71 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- CONTAINER -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- INPUT ALAS -->
+        <EditText
+            android:id="@+id/inputAlas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan Alas"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- INPUT TINGGI -->
+        <EditText
+            android:id="@+id/inputTinggi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan Tinggi"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- BUTTON SEGITIGA -->
+        <Button
+            android:id="@+id/btnHitungSegitiga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hitung Segitiga"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- INPUT SISI -->
+        <EditText
+            android:id="@+id/inputSisi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan Sisi Kubus"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- BUTTON KUBUS -->
+        <Button
+            android:id="@+id/btnHitungKubus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hitung Kubus"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- HASIL -->
+        <TextView
+            android:id="@+id/textHasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hasil akan tampil di sini"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
