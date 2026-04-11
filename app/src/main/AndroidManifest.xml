@@ -7,47 +7,34 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="Aplikasi DF"
+        android:label="Aplikasi Tani Hub"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Dellapink">
 
-        <!-- ✅ HALAMAN PERTAMA (LOGIN) -->
         <activity
             android:name=".pertemuan_3.LoginActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
-        <!-- ✅ HALAMAN SETELAH LOGIN -->
-        <activity
-            android:name=".pertemuan_3.WelcomeActivity"
-            android:exported="false" />
+        <activity android:name=".pertemuan_4.MenuUtamaActivity" android:exported="false" />
+        <activity android:name=".pertemuan_4.ProfilActivity" android:exported="false" />
+        <activity android:name=".pertemuan_4.DashboardPanenActivity" android:exported="false" />
 
-        <!-- ✅ WARMING UP -->
-        <activity
-            android:name=".pertemuan_3.ThirdActivity"
-            android:exported="false" />
+        <activity android:name=".pertemuan_3.WelcomeActivity" android:exported="false" />
 
-        <activity
-            android:name=".pertemuan_3.ThirdResultActivity"
-            android:exported="false" />
-
-        <!-- ✅ ACTIVITY LAMA (tidak jadi launcher lagi) -->
         <activity
             android:name=".pertemuan_2.SecondActivity"
+            android:label="Rumus Bangun Ruang"
             android:exported="false" />
 
-        <!-- (optional, kalau masih dipakai) -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+        <activity android:name=".pertemuan_3.ThirdActivity" android:exported="false" />
+        <activity android:name=".pertemuan_3.ThirdResultActivity" android:exported="false" />
+        <activity android:name=".MainActivity" android:exported="false" />
 
     </application>
-
 </manifest>

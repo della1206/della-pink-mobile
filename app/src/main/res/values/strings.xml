@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">TaniHub</string>
-    <string name="login">Login Petani</string>
+    <string name="app_name">Aplikasi tanihub</string>
+    <string name="login">Login </string>
 </resources>
+

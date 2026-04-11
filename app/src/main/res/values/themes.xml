@@ -1,9 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Base.Theme.Dellapink" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">#28C628</item>
+        <item name="colorSecondary">#4F6D4F</item>
+        <item name="android:statusBarColor">#F3F3F3</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="Theme.Dellapink" parent="Base.Theme.Dellapink" />
+
+    <style name="CircleImage" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="RoundedCard" parent="">
+        <item name="cornerSize">16dp</item>
+    </style>
 </resources>

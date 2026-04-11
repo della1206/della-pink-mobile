@@ -4,97 +4,103 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6A1B9A"
-    android:padding="20dp">
-
+    android:background="#E8F5E9">
 
     <ImageView
-        android:id="@+id/logodf"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="108dp"
-        android:src="@drawable/logodf"
+        android:id="@+id/imgHeader"
+        android:layout_width="197dp"
+        android:layout_height="197dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/logo_tanihub"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtTitle"
+        android:id="@+id/txtLoginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Welcome Back"
-        android:textColor="#FFFFFF"
-        android:textSize="22sp"
+        android:text="Login"
+        android:textColor="#000000"
+        android:textSize="28sp"
         android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logodf" />
+        app:layout_constraintTop_toBottomOf="@id/imgHeader" />
+
+    <TextView
+        android:id="@+id/txtSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="silakan masuk ke akun anda untuk\nMengelola hasil Tani"
+        android:textColor="#28C628"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/txtLoginTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
 
     <EditText
         android:id="@+id/inputUsername"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="Username"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:hint="No. Handphone atau Email"
+        android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtTitle" />
+        app:layout_constraintTop_toBottomOf="@id/txtSubTitle" />
 
     <EditText
         android:id="@+id/inputPassword"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="Password"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:hint="Kata sandi"
         android:inputType="textPassword"
+        android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputUsername" />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="LOGIN"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Masuk Sekarang"
+        android:backgroundTint="#28C628"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputPassword" />
 
-    <!-- DAFTAR -->
     <TextView
         android:id="@+id/txtDaftar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Belum punya akun? Daftar disini"
+        android:textColor="#28C628"
         app:layout_constraintTop_toBottomOf="@id/btnLogin"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp"/>
-
-    <!-- GOOGLE -->
-    <Button
-        android:id="@+id/btnGoogle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Lanjutkan dengan Google"
-        android:backgroundTint="#6F6D6D"
-        android:textColor="#090808"
-        app:layout_constraintTop_toBottomOf="@id/txtDaftar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"/>
 
-    <TextView
-        android:id="@+id/textHasil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+    <Button
+        android:id="@+id/btnGoogle"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Lanjutkan dengan Google"
+        android:backgroundTint="#D3D3D3"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/txtDaftar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
