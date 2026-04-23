@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,30 +12,46 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Dellapink">
+        <activity
+            android:name=".pertemuan_6.WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pertemuan_6.SplashScreenActivity"
+            android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
         <activity
             android:name=".pertemuan_3.LoginActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".pertemuan_4.MenuUtamaActivity" android:exported="false" />
-        <activity android:name=".pertemuan_4.ProfilActivity" android:exported="false" />
-        <activity android:name=".pertemuan_4.DashboardPanenActivity" android:exported="false" />
-
-        <activity android:name=".pertemuan_3.WelcomeActivity" android:exported="false" />
-
+            android:exported="false"/>
+        <activity
+            android:name=".pertemuan_4.MenuUtamaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pertemuan_4.ProfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pertemuan_4.DashboardPanenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pertemuan_3.WelcomeActivity"
+            android:exported="false" />
         <activity
             android:name=".pertemuan_2.SecondActivity"
-            android:label="Rumus Bangun Ruang"
+            android:exported="false"
+            android:label="Rumus Bangun Ruang" />
+        <activity
+            android:name=".pertemuan_3.ThirdActivity"
             android:exported="false" />
-
-        <activity android:name=".pertemuan_3.ThirdActivity" android:exported="false" />
-        <activity android:name=".pertemuan_3.ThirdResultActivity" android:exported="false" />
-        <activity android:name=".MainActivity" android:exported="false" />
-
+        <activity
+            android:name=".pertemuan_3.ThirdResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
     </application>
+
 </manifest>

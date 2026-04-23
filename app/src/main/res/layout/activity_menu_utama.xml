@@ -6,15 +6,25 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#28C628"
+        app:titleTextColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <ImageView
         android:id="@+id/imgLogoMenu"
         android:layout_width="120dp"
         android:layout_height="112dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
     <TextView
         android:id="@+id/txtMenuTitle"
@@ -43,18 +53,32 @@
         app:layout_constraintTop_toBottomOf="@id/txtMenuTitle" />
 
     <Button
+        android:id="@+id/btnWebView"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#2E7D32"
+        android:text="WEB VIEW BINA DESA"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtMenuDesc" />
+
+    <Button
         android:id="@+id/btnRumus"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#1976D2"
         android:text="RUMUS BANGUN RUANG"
         android:textAllCaps="true"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtMenuDesc" />
+        app:layout_constraintTop_toBottomOf="@id/btnWebView" />
 
     <Button
         android:id="@+id/btnProfil"
