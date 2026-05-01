@@ -1,10 +1,10 @@
-package com.example.della_pink.pertemuan_3
+package com.example.della_pink.Home.pertemuan_3
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.della_pink.databinding.ActivityWelcomeBinding
-import com.example.della_pink.pertemuan_4.MenuUtamaActivity
+import com.example.della_pink.Home.pertemuan_4.MenuUtamaActivity
 
 class WelcomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityWelcomeBinding

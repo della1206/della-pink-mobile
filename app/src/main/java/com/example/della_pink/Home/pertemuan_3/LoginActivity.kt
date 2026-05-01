@@ -1,11 +1,12 @@
-package com.example.della_pink.pertemuan_3
+package com.example.della_pink.Home.pertemuan_3
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.della_pink.BaseActivity
 import com.example.della_pink.databinding.ActivityLoginBinding
-import com.example.della_pink.pertemuan_4.MenuUtamaActivity
+import com.example.della_pink.Home.pertemuan_4.MenuUtamaActivity
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -26,11 +27,11 @@ class LoginActivity : AppCompatActivity() {
                 editor.putString("username", username)
                 editor.apply()
 
-                val intent = Intent(this, MenuUtamaActivity::class.java)
+                val intent = Intent(this, BaseActivity::class.java)
                 startActivity(intent)
                 finish()
             } else {
-                androidx.appcompat.app.AlertDialog.Builder(this)
+                AlertDialog.Builder(this)
                     .setTitle("Gagal")
                     .setMessage("Silahkan coba lagi")
                     .setPositiveButton("OK", null)

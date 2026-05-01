@@ -1,4 +1,4 @@
-package com.example.della_pink.pertemuan_3
+package com.example.della_pink.Home.pertemuan_3
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

@@ -1,4 +1,4 @@
-package com.example.della_pink.pertemuan_2
+package com.example.della_pink.Home.pertemuan_2
 
 import android.os.Bundle
 import android.widget.Toast
