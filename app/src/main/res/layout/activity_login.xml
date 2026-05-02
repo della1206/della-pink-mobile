@@ -11,7 +11,7 @@
         android:layout_width="197dp"
         android:layout_height="197dp"
         android:layout_marginTop="60dp"
-        android:src="@drawable/logo_tanihub"
+        android:src="@drawable/logoo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,7 +33,7 @@
         android:id="@+id/txtSubTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="silakan masuk ke akun anda untuk\nMengelola hasil Tani"
+        android:text="silakan masuk ke akun anda untuk\nMengelola bina desa"
         android:textColor="#28C628"
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/txtLoginTitle"

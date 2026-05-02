@@ -42,40 +42,53 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="24dp"/>
 
+            <!-- ID disesuaikan menjadi btnRumus -->
             <Button
-                android:id="@+id/btn_to_second"
+                android:id="@+id/btnRumus"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="1. Rumus Bangun Ruang"
+                android:text="Rumus Bangun Ruang"
+                android:backgroundTint="#8DD76F"
+                android:layout_marginBottom="12dp"
+                android:textAllCaps="false"/>
+
+            <!-- ID disesuaikan menjadi btnProfilPengguna -->
+            <Button
+                android:id="@+id/btnProfilPengguna"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Profil Pengguna"
                 android:backgroundTint="#8DD76F"
                 android:layout_marginBottom="12dp"
                 android:textAllCaps="false"/>
 
             <Button
-                android:id="@+id/btn_to_third"
+                android:id="@+id/btnPanen"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="2. Profil Pengguna"
+                android:text=" Dashboard Hasil Panen"
                 android:backgroundTint="#8DD76F"
                 android:layout_marginBottom="12dp"
                 android:textAllCaps="false"/>
 
+            <!-- ID disesuaikan menjadi btnWebView -->
             <Button
-                android:id="@+id/btn_web_view"
+                android:id="@+id/btnWebView"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="3. Web Bina Desa"
+                android:text=" Web Bina Desa"
                 android:backgroundTint="#8DD76F"
                 android:layout_marginBottom="32dp"
                 android:textAllCaps="false"/>
 
+            <!-- ID tetap btnLogout sesuai kode Kotlin -->
             <Button
-                android:id="@+id/btn_logout"
+                android:id="@+id/btnLogout"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="Log Out"
                 android:backgroundTint="#E44E4E"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:textAllCaps="false"/>
 
         </LinearLayout>
