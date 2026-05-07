@@ -1,23 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5">
+    android:background="#F5F5F5"
+    tools:context=".Home.HomeFragment">
+
+    <View
+        android:id="@+id/bgHeader"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:background="@drawable/bg_header_wave"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
-        android:background="#8DD76F"
-        app:titleTextColor="@color/white"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@android:color/transparent"
+        app:title="Menu Desa"
+        app:titleTextColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,71 +43,122 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputCari"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Halaman Utama"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                android:textColor="#8DD76F"
-                android:layout_marginBottom="8dp"/>
+                android:hint="Cari Data Desa"
+                app:startIconDrawable="@drawable/ic_search"
+                app:helperText="Masukkan kata pencarian">
 
-            <TextView
-                android:layout_width="wrap_content"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCari"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupKategori"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Silakan pilih menu navigasi di bawah ini"
-                android:layout_gravity="center"
-                android:layout_marginBottom="24dp"/>
+                android:layout_marginTop="16dp"
+                app:singleSelection="true">
 
-            <!-- ID disesuaikan menjadi btnRumus -->
-            <Button
-                android:id="@+id/btnRumus"
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipPertanian"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pertanian"
+                    android:checked="true"
+                    app:chipBackgroundColor="@color/design_default_color_secondary_variant"
+                    android:textColor="@android:color/white"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipPengumuman"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pengumuman"/>
+            </com.google.android.material.chip.ChipGroup>
+
+            <androidx.gridlayout.widget.GridLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:text="Rumus Bangun Ruang"
-                android:backgroundTint="#8DD76F"
-                android:layout_marginBottom="12dp"
-                android:textAllCaps="false"/>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:columnCount="2"
+                app:useDefaultMargins="true">
 
-            <!-- ID disesuaikan menjadi btnProfilPengguna -->
-            <Button
-                android:id="@+id/btnProfilPengguna"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:text="Profil Pengguna"
-                android:backgroundTint="#8DD76F"
-                android:layout_marginBottom="12dp"
-                android:textAllCaps="false"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRumus"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:text="Rumus"
+                    android:backgroundTint="#64BF68"
+                    app:cornerRadius="18dp"
+                    app:icon="@drawable/ic_menu"
+                    app:iconGravity="textTop"
+                    app:layout_columnWeight="1"/>
 
-            <Button
-                android:id="@+id/btnPanen"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:text=" Dashboard Hasil Panen"
-                android:backgroundTint="#8DD76F"
-                android:layout_marginBottom="12dp"
-                android:textAllCaps="false"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnProfilPengguna"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:text="Profil"
+                    android:backgroundTint="#64BF68"
+                    app:cornerRadius="18dp"
+                    app:icon="@drawable/ic_profile"
+                    app:iconGravity="textTop"
+                    app:layout_columnWeight="1"/>
 
-            <!-- ID disesuaikan menjadi btnWebView -->
-            <Button
-                android:id="@+id/btnWebView"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:text=" Web Bina Desa"
-                android:backgroundTint="#8DD76F"
-                android:layout_marginBottom="32dp"
-                android:textAllCaps="false"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPanen"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:text="Panen"
+                    android:backgroundTint="#64BF68"
+                    app:cornerRadius="18dp"
+                    app:icon="@drawable/ic_home"
+                    app:iconGravity="textTop"
+                    app:layout_columnWeight="1"/>
 
-            <!-- ID tetap btnLogout sesuai kode Kotlin -->
-            <Button
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnWebView"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:text="Web Desa"
+                    android:backgroundTint="#64BF68"
+                    app:cornerRadius="18dp"
+                    app:icon="@drawable/ic_web"
+                    app:iconGravity="textTop"
+                    app:layout_columnWeight="1"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Tentang Aplikasi"
+                    android:backgroundTint="#64BF68"
+                    app:cornerRadius="18dp"
+                    app:icon="@drawable/ic_info"
+                    app:iconGravity="textStart"
+                    app:layout_columnSpan="2"/>
+
+            </androidx.gridlayout.widget.GridLayout>
+
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogout"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Log Out"
+                android:layout_marginTop="24dp"
+                android:text="Keluar Aplikasi"
                 android:backgroundTint="#E44E4E"
-                android:textColor="@android:color/white"
-                android:textAllCaps="false"/>
+                app:cornerRadius="18dp"
+                app:icon="@drawable/ic_logout"
+                app:iconGravity="textStart"/>
 
         </LinearLayout>
     </ScrollView>

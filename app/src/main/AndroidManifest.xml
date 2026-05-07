@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dellapink">
         <activity
+            android:name=".SettingActivity"
+            android:exported="false" />
+        <activity
             android:name=".BaseActivity"
             android:exported="false" />
         <activity
