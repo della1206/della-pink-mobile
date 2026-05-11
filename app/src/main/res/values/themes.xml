@@ -1,4 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <style name="Base.Theme.Dellapink" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">#28C628</item>
         <item name="colorSecondary">#4F6D4F</item>
