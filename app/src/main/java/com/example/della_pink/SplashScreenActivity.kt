@@ -4,8 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.della_pink.Home.pertemuan_3.LoginActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlin.jvm.java
 
 class SplashScreenActivity : AppCompatActivity() {
 
@@ -21,7 +23,7 @@ class SplashScreenActivity : AppCompatActivity() {
             startActivity(
                 Intent(
                     this@SplashScreenActivity,
-                    AuthActivity::class.java
+                    LoginActivity::class.java
                 )
             )
 

@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- INTERNET -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -12,60 +13,91 @@
         android:label="Web Bina Desa"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Dellapink">
-        <activity
-            android:name=".SharedPrefManager"
-            android:exported="false" />
+        android:theme="@style/Theme.Dellapink"
+        tools:targetApi="31">
+
+        <!-- AUTH -->
         <activity
             android:name=".AuthActivity"
             android:exported="false"
             android:theme="@style/Theme.Dellapink" />
-        <activity
-            android:name=".SettingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".BaseActivity"
-            android:exported="false" />
-        <activity
-            android:name=".WebViewActivity"
-            android:exported="false" />
+
+        <!-- SPLASH -->
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
+
             <intent-filter>
+
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
+
         </activity>
+
+        <!-- LOGIN -->
         <activity
             android:name=".Home.pertemuan_3.LoginActivity"
             android:exported="false" />
+
+        <!-- BASE -->
+        <activity
+            android:name=".BaseActivity"
+            android:exported="false" />
+
+        <!-- SETTING -->
+        <activity
+            android:name=".SettingActivity"
+            android:exported="false" />
+
+        <!-- WEBVIEW -->
+        <activity
+            android:name=".WebViewActivity"
+            android:exported="false" />
+
+        <!-- MENU -->
         <activity
             android:name=".Home.pertemuan_4.MenuUtamaActivity"
             android:exported="false" />
+
+        <!-- PROFIL -->
         <activity
             android:name=".Home.pertemuan_4.ProfilActivity"
             android:exported="false" />
+
+        <!-- DASHBOARD -->
         <activity
             android:name=".Home.pertemuan_4.DashboardPanenActivity"
             android:exported="false" />
+
+        <!-- WELCOME -->
         <activity
             android:name=".Home.pertemuan_3.WelcomeActivity"
             android:exported="false" />
+
+        <!-- SECOND -->
         <activity
             android:name=".Home.pertemuan_2.SecondActivity"
             android:exported="false"
             android:label="Rumus Bangun Ruang" />
+
+        <!-- THIRD -->
         <activity
             android:name=".Home.pertemuan_3.ThirdActivity"
             android:exported="false" />
+
+        <!-- THIRD RESULT -->
         <activity
             android:name=".Home.pertemuan_3.ThirdResultActivity"
             android:exported="false" />
+
+        <!-- MAIN -->
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+
     </application>
 
 </manifest>
