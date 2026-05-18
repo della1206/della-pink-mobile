@@ -22,7 +22,7 @@
         android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
         android:background="@android:color/transparent"
-        app:title="Menu Desa"
+        app:title="Home Bina Desa"
         app:titleTextColor="@android:color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,76 +87,201 @@
             <androidx.gridlayout.widget.GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 app:columnCount="2"
+                app:alignmentMode="alignBounds"
                 app:useDefaultMargins="true">
 
-                <com.google.android.material.button.MaterialButton
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnRumus"
                     android:layout_width="0dp"
-                    android:layout_height="110dp"
-                    android:text="Rumus"
-                    android:backgroundTint="#64BF68"
-                    app:cornerRadius="18dp"
-                    app:icon="@drawable/ic_menu"
-                    app:iconGravity="textTop"
-                    app:layout_columnWeight="1"/>
+                    android:layout_height="120dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="3dp"
+                    app:cardBackgroundColor="#C8E6C9"
+                    app:strokeWidth="0dp"
+                    app:layout_columnWeight="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_menu"
+                            app:tint="#64BF68"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Rumus"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                <com.google.android.material.button.MaterialButton
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnProfilPengguna"
                     android:layout_width="0dp"
-                    android:layout_height="110dp"
-                    android:text="Profil"
-                    android:backgroundTint="#64BF68"
-                    app:cornerRadius="18dp"
-                    app:icon="@drawable/ic_profile"
-                    app:iconGravity="textTop"
-                    app:layout_columnWeight="1"/>
+                    android:layout_height="120dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="3dp"
+                    app:cardBackgroundColor="#C8E6C9"
+                    app:strokeWidth="0dp"
+                    app:layout_columnWeight="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_profile"
+                            app:tint="#64BF68"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Profil"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                <com.google.android.material.button.MaterialButton
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnPanen"
                     android:layout_width="0dp"
-                    android:layout_height="110dp"
-                    android:text="Panen"
-                    android:backgroundTint="#64BF68"
-                    app:cornerRadius="18dp"
-                    app:icon="@drawable/ic_home"
-                    app:iconGravity="textTop"
-                    app:layout_columnWeight="1"/>
+                    android:layout_height="120dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="3dp"
+                    app:cardBackgroundColor="#C8E6C9"
+                    app:strokeWidth="0dp"
+                    app:layout_columnWeight="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_home"
+                            app:tint="#64BF68"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Panen"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                <com.google.android.material.button.MaterialButton
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnWebView"
                     android:layout_width="0dp"
-                    android:layout_height="110dp"
-                    android:text="Web Desa"
-                    android:backgroundTint="#64BF68"
-                    app:cornerRadius="18dp"
-                    app:icon="@drawable/ic_web"
-                    app:iconGravity="textTop"
-                    app:layout_columnWeight="1"/>
+                    android:layout_height="120dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="3dp"
+                    app:cardBackgroundColor="#C8E6C9"
+                    app:strokeWidth="0dp"
+                    app:layout_columnWeight="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_web"
+                            app:tint="#64BF68"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Web Desa"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                <com.google.android.material.button.MaterialButton
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnPertemuan10"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="3dp"
+                    app:cardBackgroundColor="#C8E6C9"
+                    app:strokeWidth="0dp"
+                    app:layout_columnWeight="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_menu"
+                            app:tint="#64BF68"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Pertemuan 10"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnSetting"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="8dp"
-                    android:text="Tentang Aplikasi"
-                    android:backgroundTint="#64BF68"
-                    app:cornerRadius="18dp"
-                    app:icon="@drawable/ic_info"
-                    app:iconGravity="textStart"
-                    app:layout_columnSpan="2"/>
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="3dp"
+                    app:cardBackgroundColor="#C8E6C9"
+                    app:strokeWidth="0dp"
+                    app:layout_columnWeight="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_info"
+                            app:tint="#64BF68"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Tentang"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
             </androidx.gridlayout.widget.GridLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogout"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="24dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="20dp"
                 android:text="Keluar Aplikasi"
                 android:backgroundTint="#E44E4E"
-                app:cornerRadius="18dp"
+                app:cornerRadius="14dp"
                 app:icon="@drawable/ic_logout"
                 app:iconGravity="textStart"/>
 

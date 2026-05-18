@@ -1,0 +1,19 @@
+package com.example.della_pink.Home.pertemuan_10
+
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.adapter.FragmentStateAdapter
+
+class TenthTabsAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
+
+    override fun getItemCount(): Int = 3
+
+    override fun createFragment(position: Int): Fragment {
+        return when (position) {
+            0 -> infoFragment()
+            1 -> wilayahFragment()
+            2 -> TabCFragment()
+            else -> throw IllegalStateException("Posisi tidak valid")
+        }
+    }
+}

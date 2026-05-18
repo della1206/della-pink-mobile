@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    // PERBAIKAN: Plugin 'kotlin-kapt' dihapus karena konflik dengan built-in Kotlin support versi baru
 }
 
 android {
@@ -18,10 +19,10 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner =
-            "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    // Mengaktifkan ViewBinding sesuai instruksi modul nomor 17
     buildFeatures {
         viewBinding = true
     }
@@ -29,11 +30,8 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
-
             proguardFiles(
-                getDefaultProguardFile(
-                    "proguard-android-optimize.txt"
-                ),
+                getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
@@ -46,44 +44,27 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-
     implementation(libs.material)
-
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
-    // GridLayout
+    // GridLayout untuk penyusunan menu Grid Desa
     implementation("androidx.gridlayout:gridlayout:1.0.0")
 
-    // Glide
+    // PERBAIKAN GLIDE: Menggunakan runtime core library saja agar aman dari konflik compiler Gradle
     implementation("com.github.bumptech.glide:glide:4.16.0")
-    annotationProcessor(
-        "com.github.bumptech.glide:compiler:4.16.0"
-    )
 
-    // Navigation Component
-    implementation(
-        "androidx.navigation:navigation-fragment-ktx:2.7.7"
-    )
+    // Navigation Component untuk struktur fragmen perpindahan halaman
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
 
-    implementation(
-        "androidx.navigation:navigation-ui-ktx:2.7.7"
-    )
-
-    // Material Dialog
-    implementation(
-        "com.google.android.material:material:1.11.0"
-    )
+    // Material Components / Dialog
+    implementation("com.google.android.material:material:1.11.0")
 
     // Testing
     testImplementation(libs.junit)
-
     androidTestImplementation(libs.androidx.junit)
-
-    androidTestImplementation(
-        libs.androidx.espresso.core
-    )
+    androidTestImplementation(libs.androidx.espresso.core)
 }

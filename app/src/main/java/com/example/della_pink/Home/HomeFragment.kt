@@ -12,6 +12,7 @@ import com.example.della_pink.Home.pertemuan_2.SecondActivity
 import com.example.della_pink.Home.pertemuan_3.LoginActivity
 import com.example.della_pink.Home.pertemuan_4.DashboardPanenActivity
 import com.example.della_pink.Home.pertemuan_4.ProfilActivity
+import com.example.della_pink.Home.pertemuan_10.TenthActivity // IMPORT TENTHACTIVITY
 import com.example.della_pink.SettingActivity
 import com.example.della_pink.WebViewActivity
 import com.example.della_pink.databinding.FragmentHomeBinding
@@ -29,6 +30,7 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -36,6 +38,7 @@ class HomeFragment : Fragment() {
         setupChipGroup()
         setupButtonListeners()
     }
+
     private fun setupToolbar() {
         (activity as? AppCompatActivity)?.apply {
             setSupportActionBar(binding.toolbar)
@@ -51,6 +54,7 @@ class HomeFragment : Fragment() {
             }
         }
     }
+
     private fun setupButtonListeners() {
         with(binding) {
             btnRumus.setOnClickListener {
@@ -71,6 +75,12 @@ class HomeFragment : Fragment() {
             btnSetting.setOnClickListener {
                 startActivity(Intent(requireContext(), SettingActivity::class.java))
             }
+
+            // TAMBAHKAN LINK BUTTON PERTEMUAN 10 DI SINI
+            btnPertemuan10.setOnClickListener {
+                startActivity(Intent(requireContext(), TenthActivity::class.java))
+            }
+
             btnLogout.setOnClickListener {
                 Toast.makeText(requireContext(), "Logout berhasil", Toast.LENGTH_SHORT).show()
                 val intent = Intent(requireContext(), LoginActivity::class.java).apply {
