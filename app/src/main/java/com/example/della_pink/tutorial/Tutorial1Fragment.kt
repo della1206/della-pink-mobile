@@ -1,0 +1,18 @@
+package com.example.della_pink.tutorial
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import com.example.della_pink.R
+
+class Tutorial1Fragment : Fragment() {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Menginflate layout khusus untuk halaman 1 (buat xml baru/sama tanpa tombol)
+        return inflater.inflate(R.layout.fragment_tutorial1, container, false)
+    }
+}

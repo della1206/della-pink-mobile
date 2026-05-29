@@ -50,20 +50,21 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
-    // GridLayout untuk penyusunan menu Grid Desa
-    implementation("androidx.gridlayout:gridlayout:1.0.0")
+    // ViewPager2 & DotsIndicator (Pertemuan 11)
+    implementation("androidx.viewpager2:viewpager2:1.1.0")
+    implementation("com.tbuonomo:dotsindicator:5.1.0")
 
-    // PERBAIKAN GLIDE: Menggunakan runtime core library saja agar aman dari konflik compiler Gradle
+    // REST API (Retrofit & GSON)
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // Glide untuk Gambar
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
-    // Navigation Component untuk struktur fragmen perpindahan halaman
+    implementation("androidx.gridlayout:gridlayout:1.0.0")
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
 
-    // Material Components / Dialog
-    implementation("com.google.android.material:material:1.11.0")
-
-    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

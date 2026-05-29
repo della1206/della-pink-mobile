@@ -8,6 +8,7 @@
     android:background="#F5F5F5"
     tools:context=".Home.HomeFragment">
 
+    <!-- Background Header Wave -->
     <View
         android:id="@+id/bgHeader"
         android:layout_width="0dp"
@@ -17,6 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <!-- Toolbar Utama -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="0dp"
@@ -28,6 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <!-- ScrollView Konten Utama -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -43,6 +46,7 @@
             android:orientation="vertical"
             android:padding="20dp">
 
+            <!-- Kolom Pencarian -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputCari"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -59,6 +63,7 @@
                     android:inputType="text"/>
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!-- Group Kategori Chip -->
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/chipGroupKategori"
                 android:layout_width="match_parent"
@@ -92,10 +97,14 @@
                 app:alignmentMode="alignBounds"
                 app:useDefaultMargins="true">
 
+                <!-- 1. Menu Rumus -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnRumus"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="3dp"
                     app:cardBackgroundColor="#C8E6C9"
@@ -122,10 +131,14 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
+                <!-- 2. Menu Profil -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnProfilPengguna"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="3dp"
                     app:cardBackgroundColor="#C8E6C9"
@@ -152,10 +165,14 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
+                <!-- 3. Menu Panen -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnPanen"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="3dp"
                     app:cardBackgroundColor="#C8E6C9"
@@ -182,10 +199,14 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
+                <!-- 4. Menu Web Desa -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnWebView"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="3dp"
                     app:cardBackgroundColor="#C8E6C9"
@@ -212,10 +233,14 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
+                <!-- 5. Menu Pertemuan 10 -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnPertemuan10"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="3dp"
                     app:cardBackgroundColor="#C8E6C9"
@@ -242,10 +267,14 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
+                <!-- 6. Menu Tentang -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnSetting"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="3dp"
                     app:cardBackgroundColor="#C8E6C9"
@@ -274,11 +303,48 @@
 
             </androidx.gridlayout.widget.GridLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvLabelBerita"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Berita Desa Terkini"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRefreshNews"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refresh"
+                    android:textColor="#64BF68"
+                    app:icon="@android:drawable/stat_notify_sync"
+                    app:iconTint="#64BF68" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_news" />
+
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogout"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="24dp"
                 android:text="Keluar Aplikasi"
                 android:backgroundTint="#E44E4E"
                 app:cornerRadius="14dp"
