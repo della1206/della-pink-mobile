@@ -9,11 +9,13 @@
 
     <style name="Theme.Dellapink" parent="Base.Theme.Dellapink" />
 
-    <style name="CircleImage" parent="">
+    <!-- 🟢 Perbaikan: Ditambahkan parent ShapeAppearance.Material3.SmallComponent -->
+    <style name="CircleImage" parent="ShapeAppearance.Material3.SmallComponent">
         <item name="cornerSize">50%</item>
     </style>
 
-    <style name="RoundedCard" parent="">
+    <!-- 🟢 Perbaikan: Ditambahkan parent ShapeAppearance.Material3.MediumComponent -->
+    <style name="RoundedCard" parent="ShapeAppearance.Material3.MediumComponent">
         <item name="cornerSize">16dp</item>
     </style>
 </resources>

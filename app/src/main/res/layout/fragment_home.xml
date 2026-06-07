@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://tools.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F5F5"
@@ -71,6 +71,7 @@
                 android:layout_marginTop="16dp"
                 app:singleSelection="true">
 
+                <!-- 🟢 FIXED: Menggunakan warna standard Material Design agar tidak crash -->
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipPertanian"
                     style="@style/Widget.MaterialComponents.Chip.Filter"
@@ -78,7 +79,7 @@
                     android:layout_height="wrap_content"
                     android:text="Pertanian"
                     android:checked="true"
-                    app:chipBackgroundColor="@color/design_default_color_secondary_variant"
+                    app:chipBackgroundColor="@color/material_on_surface_emphasis_medium"
                     android:textColor="@android:color/white"/>
 
                 <com.google.android.material.chip.Chip
@@ -217,6 +218,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
+                        <!-- 🟢 Menggunakan ic_web aslimu -->
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
@@ -339,7 +341,7 @@
                 android:nestedScrollingEnabled="false"
                 tools:listitem="@layout/item_news" />
 
-
+            <!-- 🟢 Menggunakan ic_logout aslimu -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogout"
                 android:layout_width="match_parent"

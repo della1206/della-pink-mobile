@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.della_pink.AuthActivity
-import com.example.della_pink.BaseActivity
+import com.example.della_pink.BaseActivity // Memastikan BaseActivity ter-import dengan benar
 import com.example.della_pink.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -18,44 +18,28 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // LOGIN
+        // PROSES LOGIN
         binding.btnLogin.setOnClickListener {
 
-            val username =
-                binding.inputUsername.text.toString().trim()
+            val username = binding.inputUsername.text.toString().trim()
+            val password = binding.inputPassword.text.toString().trim()
 
-            val password =
-                binding.inputPassword.text.toString().trim()
+            val pref = getSharedPreferences("user_pref", MODE_PRIVATE)
+            val savedUsername = pref.getString("username", "Della Marcelina")
+            val savedPassword = pref.getString("password", "123")
 
-            val pref =
-                getSharedPreferences("user_pref", MODE_PRIVATE)
-
-            val savedUsername =
-                pref.getString("username", "")
-
-            val savedPassword =
-                pref.getString("password", "")
-
-            if (username == savedUsername &&
-                password == savedPassword
-            ) {
+            if (username == savedUsername && password == savedPassword) {
 
                 pref.edit().apply {
                     putBoolean("isLogin", true)
                     apply()
                 }
 
-                startActivity(
-                    Intent(
-                        this,
-                        BaseActivity::class.java
-                    )
-                )
-
+                // 🟢 SIAP LOGIN: Langsung membuka BaseActivity (Kontainer Home Fragment)
+                startActivity(Intent(this, BaseActivity::class.java))
                 finish()
 
             } else {
-
                 AlertDialog.Builder(this)
                     .setTitle("Login Gagal")
                     .setMessage("Username atau Password salah")
@@ -64,15 +48,9 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        // DAFTAR DISINI
+        // TOMBOL DAFTAR
         binding.txtDaftar.setOnClickListener {
-
-            startActivity(
-                Intent(
-                    this,
-                    AuthActivity::class.java
-                )
-            )
+            startActivity(Intent(this, AuthActivity::class.java))
         }
     }
 }

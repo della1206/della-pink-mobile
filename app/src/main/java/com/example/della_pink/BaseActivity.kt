@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.della_pink.About.AboutFragment
 import com.example.della_pink.Home.HomeFragment
+import com.example.della_pink.Note.FragmentNote // 🟢 Ditambahkan sesuai modul langkah 3
 import com.example.della_pink.Profile.ProfileFragment
 import com.example.della_pink.databinding.ActivityBaseBinding
 
@@ -25,6 +26,7 @@ class BaseActivity : AppCompatActivity() {
                 R.id.home -> replaceFragment(HomeFragment())
                 R.id.about -> replaceFragment(AboutFragment())
                 R.id.profile -> replaceFragment(ProfileFragment())
+                R.id.note -> replaceFragment(FragmentNote())
             }
             true
         }
