@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.della_pink.About.AboutFragment
 import com.example.della_pink.Home.HomeFragment
-import com.example.della_pink.Note.FragmentNote // 🟢 Ditambahkan sesuai modul langkah 3
+import com.example.della_pink.Note.FragmentNote
 import com.example.della_pink.Profile.ProfileFragment
 import com.example.della_pink.databinding.ActivityBaseBinding
 
@@ -26,7 +26,8 @@ class BaseActivity : AppCompatActivity() {
                 R.id.home -> replaceFragment(HomeFragment())
                 R.id.about -> replaceFragment(AboutFragment())
                 R.id.profile -> replaceFragment(ProfileFragment())
-                R.id.note -> replaceFragment(FragmentNote())
+                R.id.note -> replaceFragment(FragmentNote()) // 🟢 Room Database 1
+                R.id.warga -> replaceFragment(FragmentWarga()) // 🟢 FIXED: Room Database 2 Terpasang!
             }
             true
         }

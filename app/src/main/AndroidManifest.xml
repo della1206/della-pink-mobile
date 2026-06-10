@@ -13,82 +13,67 @@
         android:label="Web Bina Desa"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-
         android:theme="@style/Theme.Dellapink"
-
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
+        <activity
+            android:name=".WargaFormActivity"
+            android:exported="false" />
         <activity
             android:name=".Note.NoteFormActivity"
             android:exported="false" />
-
         <activity
             android:name=".tutorial.TutorialMessageActivity"
             android:exported="false" />
-
         <activity
             android:name=".Home.pertemuan_10.TenthActivity"
             android:exported="false" />
-
         <activity
             android:name=".AuthActivity"
             android:exported="false" />
-
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Home.pertemuan_3.LoginActivity"
             android:exported="false" />
-
         <activity
             android:name=".BaseActivity"
             android:exported="false" />
-
         <activity
             android:name=".SettingActivity"
             android:exported="false" />
-
         <activity
             android:name=".WebViewActivity"
             android:exported="false" />
-
         <activity
             android:name=".Home.pertemuan_4.MenuUtamaActivity"
             android:exported="false" />
-
         <activity
             android:name=".Home.pertemuan_4.ProfilActivity"
             android:exported="false" />
-
         <activity
             android:name=".Home.pertemuan_4.DashboardPanenActivity"
             android:exported="false" />
-
         <activity
             android:name=".Home.pertemuan_3.WelcomeActivity"
             android:exported="false" />
-
         <activity
             android:name=".Home.pertemuan_2.SecondActivity"
             android:exported="false"
             android:label="Rumus Bangun Ruang" />
-
         <activity
             android:name=".Home.pertemuan_3.ThirdActivity"
             android:exported="false" />
-
         <activity
             android:name=".Home.pertemuan_3.ThirdResultActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="false" />

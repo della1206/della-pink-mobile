@@ -13,12 +13,11 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <!-- 🟢 Menggunakan ic_launcher bawaan agar tidak crash karena gambar hilang -->
         <ImageView
             android:id="@+id/logo_splash"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/logoo"
             android:contentDescription="Logo Perangkat Desa" />
 
         <TextView
