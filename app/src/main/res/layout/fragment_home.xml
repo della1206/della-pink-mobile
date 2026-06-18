@@ -8,7 +8,6 @@
     android:background="#F5F5F5"
     tools:context=".Home.HomeFragment">
 
-    <!-- Background Header Wave -->
     <View
         android:id="@+id/bgHeader"
         android:layout_width="0dp"
@@ -18,7 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Toolbar Utama -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="0dp"
@@ -30,7 +28,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- ScrollView Konten Utama -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -46,7 +43,6 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <!-- Kolom Pencarian -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputCari"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -63,7 +59,136 @@
                     android:inputType="text"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Group Kategori Chip -->
+            <!-- ⭐ CARD NOTIFIKASI & REMINDER (DITAMBAHKAN) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Notifikasi Pengingat Desa"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kirim notifikasi atau atur pengingat untuk kegiatan desa"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/darker_gray"
+                        android:layout_marginBottom="12dp" />
+
+                    <!-- Input Nama untuk Notifikasi -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nama Warga"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputNamaWarga"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text="Budi" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnKirimNotifikasi"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:text=" Kirim Notif"
+                            android:backgroundTint="#4CAF50"
+                            app:cornerRadius="12dp"
+                            app:icon="@drawable/ic_notification"
+                            app:iconGravity="textStart" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnReminder"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:text="Set Reminder"
+                            android:backgroundTint="#FF9800"
+                            app:cornerRadius="12dp"
+                            app:icon="@drawable/ic_alarm"
+                            app:iconGravity="textStart" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Pilih durasi pengingat:"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroupReminder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        app:singleSelection="true"
+                        app:selectionRequired="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip1Menit"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1 Menit"
+                            android:checked="true" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip5Menit"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5 Menit" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip10Menit"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10 Menit" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip30Menit"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="30 Menit" />
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ⭐ GROUP KATEGORI CHIP -->
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/chipGroupKategori"
                 android:layout_width="match_parent"
@@ -71,7 +196,6 @@
                 android:layout_marginTop="16dp"
                 app:singleSelection="true">
 
-                <!-- 🟢 FIXED: Menggunakan warna standard Material Design agar tidak crash -->
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipPertanian"
                     style="@style/Widget.MaterialComponents.Chip.Filter"
@@ -79,17 +203,20 @@
                     android:layout_height="wrap_content"
                     android:text="Pertanian"
                     android:checked="true"
-                    app:chipBackgroundColor="@color/material_on_surface_emphasis_medium"
-                    android:textColor="@android:color/white"/>
+                    android:textColor="@android:color/white"
+                    app:chipBackgroundColor="#4CAF50"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipPengumuman"
                     style="@style/Widget.MaterialComponents.Chip.Filter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pengumuman"/>
+                    android:text="Pengumuman"
+                    android:textColor="@android:color/white"
+                    app:chipBackgroundColor="#2196F3"/>
             </com.google.android.material.chip.ChipGroup>
 
+            <!-- ⭐ GRID LAYOUT MENU -->
             <androidx.gridlayout.widget.GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -218,7 +345,6 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
-                        <!-- 🟢 Menggunakan ic_web aslimu -->
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
@@ -305,6 +431,7 @@
 
             </androidx.gridlayout.widget.GridLayout>
 
+            <!-- ⭐ BERITA DESA -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -318,7 +445,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Berita Desa Terkini"
+                    android:text="📰 Berita Desa Terkini"
                     android:textColor="@android:color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -341,7 +468,7 @@
                 android:nestedScrollingEnabled="false"
                 tools:listitem="@layout/item_news" />
 
-            <!-- 🟢 Menggunakan ic_logout aslimu -->
+            <!-- ⭐ TOMBOL LOGOUT -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogout"
                 android:layout_width="match_parent"
