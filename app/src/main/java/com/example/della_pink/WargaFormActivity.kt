@@ -1,36 +1,34 @@
 package com.example.della_pink
 
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.della_pink.data.AppDatabase
 import com.example.della_pink.data.entity.WargaEntity
+import com.example.della_pink.databinding.ActivityWargaFormBinding  // ✅ TAMBAHKAN
+import com.google.android.material.dialog.MaterialAlertDialogBuilder  // ✅ TAMBAHKAN
+import com.google.android.material.snackbar.Snackbar  // ✅ TAMBAHKAN
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class WargaFormActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityWargaFormBinding
     private lateinit var database: AppDatabase
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_warga_form)
+        binding = ActivityWargaFormBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         database = AppDatabase.getInstance(this)
 
-        val etNik = findViewById<EditText>(R.id.etNikWarga)
-        val etNama = findViewById<EditText>(R.id.etNamaWarga)
-        val etJenisKelamin = findViewById<EditText>(R.id.etJenisKelaminWarga)
-        val etAlamat = findViewById<EditText>(R.id.etAlamatWarga)
-        val btnSimpan = findViewById<Button>(R.id.btnSimpanWarga)
-
-        btnSimpan.setOnClickListener {
-            val inputNik = etNik.text.toString()
-            val inputNama = etNama.text.toString()
-            val inputJK = etJenisKelamin.text.toString()
-            val inputAlamat = etAlamat.text.toString()
+        binding.btnSimpanWarga.setOnClickListener {
+            val inputNik = binding.etNikWarga.text.toString()
+            val inputNama = binding.etNamaWarga.text.toString()
+            val inputJK = binding.etJenisKelaminWarga.text.toString()
+            val inputAlamat = binding.etAlamatWarga.text.toString()
 
             if (inputNik.isNotEmpty() && inputNama.isNotEmpty() && inputJK.isNotEmpty() && inputAlamat.isNotEmpty()) {
                 CoroutineScope(Dispatchers.IO).launch {
@@ -46,8 +44,20 @@ class WargaFormActivity : AppCompatActivity() {
                         database.wargaDao().insertWarga(wargaBaru)
 
                         runOnUiThread {
-                            Toast.makeText(this@WargaFormActivity, "Sukses! Data Warga Masuk Room Database", Toast.LENGTH_LONG).show()
-                            finish()
+                            Snackbar.make(
+                                binding.root,
+                                "✅ Sukses! Data Warga Masuk Room Database",
+                                Snackbar.LENGTH_LONG
+                            ).show()
+
+                            MaterialAlertDialogBuilder(this@WargaFormActivity)
+                                .setTitle("✅ Berhasil!")
+                                .setMessage("Data warga atas nama $inputNama berhasil disimpan!")
+                                .setPositiveButton("OK") { dialog, _ ->
+                                    dialog.dismiss()
+                                    finish()
+                                }
+                                .show()
                         }
                     } catch (e: Exception) {
                         runOnUiThread {
@@ -56,7 +66,11 @@ class WargaFormActivity : AppCompatActivity() {
                     }
                 }
             } else {
-                Toast.makeText(this, "Semua kolom form kependudukan wajib diisi!", Toast.LENGTH_SHORT).show()
+                Snackbar.make(
+                    binding.root,
+                    "⚠️ Semua kolom form kependudukan wajib diisi!",
+                    Snackbar.LENGTH_LONG
+                ).show()
             }
         }
     }

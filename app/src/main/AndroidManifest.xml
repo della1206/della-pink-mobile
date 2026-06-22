@@ -4,17 +4,15 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
-
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
+
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -28,6 +26,9 @@
         android:theme="@style/Theme.Dellapink"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".Home.pertemuan_7.ListViewActivity"
+            android:exported="false" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -37,24 +38,16 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
-        </provider>
-
-        <!-- ✅ TAMBAHAN PERTEMUAN 13 - Activity Camera & QR -->
+        </provider> <!-- ✅ TAMBAHAN PERTEMUAN 13 - Activity Camera & QR -->
         <activity
             android:name=".Home.pertemuan_13.ThirteenthActivity"
-            android:exported="false" />
-
-        <!-- ✅ Daftarkan Receiver untuk Reminder -->
+            android:exported="false" /> <!-- ✅ Daftarkan Receiver untuk Reminder -->
         <receiver
             android:name=".utils.ReminderReceiver"
-            android:exported="false" />
-
-        <!-- ✅ Activity untuk Detail Notifikasi -->
+            android:exported="false" /> <!-- ✅ Activity untuk Detail Notifikasi -->
         <activity
             android:name=".notification.NotificationDetailActivity"
-            android:exported="false" />
-
-        <!-- ✅ Activities yang sudah ada -->
+            android:exported="false" /> <!-- ✅ Activities yang sudah ada -->
         <activity
             android:name=".WargaFormActivity"
             android:exported="false" />
@@ -75,6 +68,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -115,7 +109,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
     </application>
 
 </manifest>

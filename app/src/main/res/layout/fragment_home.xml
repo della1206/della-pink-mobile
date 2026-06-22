@@ -89,7 +89,6 @@
                         android:textColor="@android:color/darker_gray"
                         android:layout_marginBottom="12dp" />
 
-                    <!-- Input Nama untuk Notifikasi -->
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -187,7 +186,7 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- ⭐ GROUP KATEGORI CHIP -->
+            <!-- CHIP KATEGORI -->
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/chipGroupKategori"
                 android:layout_width="match_parent"
@@ -215,7 +214,6 @@
                     app:chipBackgroundColor="#2196F3"/>
             </com.google.android.material.chip.ChipGroup>
 
-            <!-- ⭐ GRID LAYOUT MENU -->
             <androidx.gridlayout.widget.GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -224,7 +222,6 @@
                 app:alignmentMode="alignBounds"
                 app:useDefaultMargins="true">
 
-                <!-- 1. Menu Rumus -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnRumus"
                     android:layout_width="0dp"
@@ -258,7 +255,6 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- 2. Menu Profil -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnProfilPengguna"
                     android:layout_width="0dp"
@@ -292,7 +288,7 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- 3. Menu Panen -->
+                <!-- 3. Panen -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnPanen"
                     android:layout_width="0dp"
@@ -326,7 +322,7 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- 4. Menu Web Desa -->
+                <!-- 4. Web Desa -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnWebView"
                     android:layout_width="0dp"
@@ -360,7 +356,7 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- 5. Menu Pertemuan 10 -->
+                <!-- 5. Pertemuan 10 -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnPertemuan10"
                     android:layout_width="0dp"
@@ -394,7 +390,6 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- 6. Menu Tentang -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnSetting"
                     android:layout_width="0dp"
@@ -428,51 +423,92 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnPertemuan13"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="3dp"
+                    app:cardBackgroundColor="#E8F5E9"
+                    app:strokeColor="#4CAF50"
+                    app:strokeWidth="1dp"
+                    app:layout_columnWeight="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_camera"
+                            app:tint="#4CAF50"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Kamera QR"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(Pertemuan 13)"
+                            android:textColor="#4CAF50"
+                            android:textSize="10sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnPertemuan7"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="3dp"
+                    app:cardBackgroundColor="#FFF3E0"
+                    app:strokeColor="#8ED75F"
+                    app:strokeWidth="1dp"
+                    app:layout_columnWeight="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_list"
+                            app:tint="#73BC42"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="ListView"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(Pertemuan 7)"
+                            android:textColor="#69A83F"
+                            android:textSize="10sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
             </androidx.gridlayout.widget.GridLayout>
 
-            <!-- ✅ TAMBAHAN PERTEMUAN 13 - TOMBOL KAMERA & QR -->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/btnPertemuan13"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginTop="16dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="3dp"
-                app:cardBackgroundColor="#E8F5E9"
-                app:strokeColor="#4CAF50"
-                app:strokeWidth="1dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:padding="16dp">
-                    <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:src="@drawable/ic_menu"
-                        app:tint="#4CAF50"/>
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginStart="12dp"
-                        android:text="📷 Kamera QR Code (Pertemuan 13)"
-                        android:textColor="@android:color/black"
-                        android:textStyle="bold"
-                        android:textSize="14sp"/>
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_arrow"
-                        app:tint="#4CAF50"/>
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- ⭐ BERITA DESA -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -486,7 +522,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="📰 Berita Desa Terkini"
+                    android:text="Berita Desa Terkini"
                     android:textColor="@android:color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -509,7 +545,6 @@
                 android:nestedScrollingEnabled="false"
                 tools:listitem="@layout/item_news" />
 
-            <!-- ⭐ TOMBOL LOGOUT -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogout"
                 android:layout_width="match_parent"

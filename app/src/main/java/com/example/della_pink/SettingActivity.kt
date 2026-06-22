@@ -20,6 +20,7 @@ class SettingActivity : AppCompatActivity() {
         "Bantuan",
         "Versi Aplikasi v1.0"
     )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -29,22 +30,17 @@ class SettingActivity : AppCompatActivity() {
         initView()
         setupListView()
     }
+
     private fun setupInsets() {
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars =
-                insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(
-                systemBars.left,
-                systemBars.top,
-                systemBars.right,
-                systemBars.bottom
-            )
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
     }
+
     private fun setupToolbar() {
-        val toolbar =
-            findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.title = "Tentang Aplikasi"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -52,9 +48,11 @@ class SettingActivity : AppCompatActivity() {
             finish()
         }
     }
+
     private fun initView() {
         lvAbout = findViewById(R.id.lvAbout)
     }
+
     private fun setupListView() {
         val adapter = ArrayAdapter(
             this,
@@ -64,11 +62,7 @@ class SettingActivity : AppCompatActivity() {
         lvAbout.adapter = adapter
         lvAbout.setOnItemClickListener { _, _, position, _ ->
             val title = listData[position]
-            Toast.makeText(
-                this,
-                "Membuka: $title",
-                Toast.LENGTH_SHORT
-            ).show()
+            Toast.makeText(this, "Membuka: $title", Toast.LENGTH_SHORT).show()
             val message = when (title) {
                 "Tentang Program Bina Desa" -> {
                     "Program ini bertujuan untuk membantu digitalisasi administrasi desa agar pelayanan masyarakat menjadi lebih cepat dan modern."
@@ -92,6 +86,7 @@ class SettingActivity : AppCompatActivity() {
             showDialog(title, message)
         }
     }
+
     private fun showDialog(title: String, message: String) {
         MaterialAlertDialogBuilder(this)
             .setTitle(title)

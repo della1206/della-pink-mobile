@@ -33,7 +33,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnGenerate"
-        android:text="🎯 Generate QR"
+        android:text=" Generate QR"
         android:layout_marginTop="16dp"
         android:layout_width="wrap_content"
         android:layout_height="55dp"

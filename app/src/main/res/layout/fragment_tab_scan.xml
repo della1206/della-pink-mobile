@@ -15,7 +15,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- ✅ BORDER SCAN DI TENGAH -->
     <View
         android:id="@+id/scanBorder"
         android:layout_width="250dp"
@@ -28,7 +27,7 @@
 
     <TextView
         android:id="@+id/tvScanResult"
-        android:text="📷 Arahkan QR Code ke tengah layar"
+        android:text="Arahkan QR Code ke tengah layar"
         android:textColor="@android:color/white"
         android:textSize="14sp"
         android:gravity="center"

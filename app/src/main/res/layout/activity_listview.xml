@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#4CAF50"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:titleTextColor="@android:color/white"
+            app:title="ListView" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📋 ArrayAdapter"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp"/>
+
+        <ListView
+            android:id="@+id/listViewArray"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#FFFFFF"
+            android:divider="#E0E0E0"
+            android:dividerHeight="1dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#F5F5F5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📋 SimpleAdapter"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp"/>
+
+        <ListView
+            android:id="@+id/listViewSimple"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#FFFFFF"
+            android:divider="#E0E0E0"
+            android:dividerHeight="1dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#F5F5F5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📋 CustomAdapter"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp"/>
+
+        <ListView
+            android:id="@+id/listViewCustom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:divider="#E0E0E0"
+            android:dividerHeight="1dp"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
