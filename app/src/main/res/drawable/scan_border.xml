@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#44000000"/>
+        </shape>
+    </item>
+
+    <item android:top="50dp" android:bottom="50dp" android:left="50dp" android:right="50dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#00000000"/>
+            <stroke
+                android:width="4dp"
+                android:color="#00E5FF"/>
+            <corners android:radius="12dp"/>
+        </shape>
+    </item>
+
+    <item android:top="50dp" android:left="50dp">
+        <shape android:shape="rectangle">
+            <size android:width="30dp" android:height="30dp"/>
+            <stroke
+                android:width="4dp"
+                android:color="#00E5FF"/>
+            <corners android:topLeftRadius="12dp"/>
+        </shape>
+    </item>
+
+    <!-- Corner markers - Top Right -->
+    <item android:top="50dp" android:right="50dp">
+        <shape android:shape="rectangle">
+            <size android:width="30dp" android:height="30dp"/>
+            <stroke
+                android:width="4dp"
+                android:color="#00E5FF"/>
+            <corners android:topRightRadius="12dp"/>
+        </shape>
+    </item>
+
+    <!-- Corner markers - Bottom Left -->
+    <item android:bottom="50dp" android:left="50dp">
+        <shape android:shape="rectangle">
+            <size android:width="30dp" android:height="30dp"/>
+            <stroke
+                android:width="4dp"
+                android:color="#00E5FF"/>
+            <corners android:bottomLeftRadius="12dp"/>
+        </shape>
+    </item>
+
+    <item android:bottom="50dp" android:right="50dp">
+        <shape android:shape="rectangle">
+            <size android:width="30dp" android:height="30dp"/>
+            <stroke
+                android:width="4dp"
+                android:color="#00E5FF"/>
+            <corners android:bottomRightRadius="12dp"/>
+        </shape>
+    </item>
+</layer-list>

@@ -45,24 +45,28 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.8.2")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
-    // Kembalikan ke 5.1.0 karena versi ini yang terbukti sukses terdownload di laptopmu tadi
     implementation("androidx.viewpager2:viewpager2:1.1.0")
     implementation("com.tbuonomo:dotsindicator:5.1.0")
 
-    // REST API (Retrofit & GSON)
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
-    // Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
     implementation("androidx.gridlayout:gridlayout:1.0.0")
+
+    implementation("com.google.zxing:core:3.5.2")
+
+    implementation("androidx.camera:camera-camera2:1.3.3")
+    implementation("androidx.camera:camera-lifecycle:1.3.3")
+    implementation("androidx.camera:camera-view:1.3.3")
+
+    implementation("com.google.mlkit:barcode-scanning:17.2.0")
 
     // Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
     implementation(libs.androidx.activity)
-
 
     val room_version = "2.6.0"
     implementation("androidx.room:room-runtime:$room_version")

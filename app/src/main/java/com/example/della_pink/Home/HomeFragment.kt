@@ -11,6 +11,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.della_pink.Home.pertemuan_10.TenthActivity
+import com.example.della_pink.Home.pertemuan_13.ThirteenthActivity
 import com.example.della_pink.Home.pertemuan_2.SecondActivity
 import com.example.della_pink.Home.pertemuan_3.LoginActivity
 import com.example.della_pink.Home.pertemuan_4.DashboardPanenActivity
@@ -214,6 +215,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         binding.btnSetting.setOnClickListener {
             startActivity(Intent(requireContext(), SettingActivity::class.java))
+        }
+
+        // ✅ TAMBAHKAN INI - TOMBOL PERTEMUAN 13
+        binding.btnPertemuan13.setOnClickListener {
+            startActivity(Intent(requireContext(), ThirteenthActivity::class.java))
         }
     }
 
